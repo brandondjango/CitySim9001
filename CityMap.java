@@ -17,41 +17,47 @@ public class CityMap {
 		 key is Hotel, the corresponding data is an arraylist of the neighbors ["diner, "library"]
 		 */
 		
-		ArrayList<String> list = new ArrayList<String>();
+		ArrayList<String> oclist = new ArrayList<String>();
+		ArrayList<String> hotellist = new ArrayList<String>();
+		ArrayList<String> librarylist = new ArrayList<String>();
+		ArrayList<String> collegelist = new ArrayList<String>();
+		ArrayList<String> dinerlist = new ArrayList<String>();
+		
 		
 					
 		//outside city neighbors
-		list.add("college");
-		list.add("hotel");
-		neighbors.put("oc", list);
+		oclist.add("college");
+		oclist.add("hotel");
+		neighbors.put("oc", oclist);
 		
 		//hotel neighbors
-		list.clear();
-		list.add("library");
-		list.add("diner");
-		neighbors.put("hotel", list);
+		
+		hotellist.add("library");
+		hotellist.add("diner");
+		neighbors.put("hotel", hotellist);
 		
 		//library neighbors
-		list.clear();
-		list.add("cleveland");
-		list.add("hotel");
-		neighbors.put("library", list);
+		
+		librarylist.add("cleveland");
+		librarylist.add("hotel");
+		neighbors.put("library", librarylist);
 		
 		//college neighbors
-		list.clear();
-		list.add("library");
-		list.add("diner");
-		neighbors.put("college", list);
+		
+		collegelist.add("library");
+		collegelist.add("diner");
+		neighbors.put("college", collegelist);
 		
 		//diner neighbors
-		list.clear();
-		list.add("colege");
-		list.add("philidelphia");
-		neighbors.put("diner", list);
+		
+		dinerlist.add("college");
+		dinerlist.add("philidelphia");
+		neighbors.put("diner", dinerlist);
 			
 	}
 	
 	public ArrayList<String> getNeighbors(String city) {
+		System.out.print(neighbors);
 		return neighbors.get(city);
 	}
 
