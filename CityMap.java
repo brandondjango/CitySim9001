@@ -56,8 +56,16 @@ public class CityMap {
 			
 	}
 	
+	public ArrayList<String> getCities() {
+		ArrayList<String> arrayList = new ArrayList<String>();
+		for (String str : neighbors.keySet())  
+		    arrayList.add(str);
+		
+		return arrayList;
+	}
+	
 	public ArrayList<String> getNeighbors(String city) {
-		System.out.print(neighbors);
+		//System.out.print(neighbors);
 		return neighbors.get(city);
 	}
 
