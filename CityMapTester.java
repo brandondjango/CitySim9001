@@ -33,5 +33,11 @@ public class CityMapTester {
     	assertEquals(true, brandon.map.getNeighbors(brandon.curr).contains(brandon.nextLoc));
 		
 	}
+	@Test
+	public void streetTest(){
+		CityMap Pitt = new CityMap();
+		assertEquals("Fifth Avenue", Pitt.getStreet("oc", "College"));
+	}
+	}
 
 }
