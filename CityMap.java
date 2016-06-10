@@ -28,21 +28,16 @@ public class CityMap {
 		ArrayList<String> librarylist = new ArrayList<String>();
 		ArrayList<String> collegelist = new ArrayList<String>();
 		ArrayList<String> dinerlist = new ArrayList<String>();
-		
-		
-					
+				
 		//outside city neighbors
 		oclist.add("college");
 		oclist.add("hotel");
-		neighbors.put("oc", oclist);
-				
+		neighbors.put("oc", oclist);	
 		//neighbors and street names
 		ocstreet.put("Hotel", "Fourth Avenue");
 		ocstreet.put("College","Fifth Ave");
 		neighbors2.put("oc", ocstreet);
-				
-				
-		//System.out.println(neighbors2.get("oc"));
+
 		
 		//hotel neighbors
 		hotellist.add("library");
@@ -61,7 +56,6 @@ public class CityMap {
 		librarystreet.put("Cleveland", "Fifth Avenue"); //fix
 		librarystreet.put("Hotel","Bill Street"); //fix
 		neighbors2.put("oc", librarystreet);
-		
 		
 		//college neighbors
 		collegelist.add("library");
