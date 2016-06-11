@@ -6,6 +6,7 @@ public class Driver {
 	int id;
 	public String curr = "";
 	public String nextLoc = "";
+	String street = "";
 	public CityMap map = new CityMap();
 	
 	public Driver(int ids, int randomSeed){
@@ -16,22 +17,20 @@ public class Driver {
 	
 
        
-    public void drive(){
-    	//start
+    public void start(){
+    	
     	this.setCurr();
     	this.setNextLoc();
+    	this.setCurrStreet();
+    	    	    	
+    }//end start method
+    
+public void drive(){
     	
-    	
-    	
-    	
-    	
-    	//System.out.print("Driver " + id + " heading from " + curr + " to " + nextLoc);
-    	//while(true){
-    		
-    		
-    		
-    	//}//while
-    	
+    	this.setCurr(nextLoc);
+    	this.setNextLoc();
+    	this.setCurrStreet();
+    	    	    	
     }//end drive method
     
     public void setCurr(){
@@ -61,6 +60,15 @@ public class Driver {
     	    	
     }
     
+    public void setCurrStreet(){
+    	
+    	street = map.getStreet(curr, nextLoc);
+    	    
+    }
+    
+    public void print(){
+    	System.out.println("Driver " + id + " is driving from " + curr + " to " + nextLoc + " via " + street);
+    }
     
 
 }

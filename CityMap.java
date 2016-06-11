@@ -89,7 +89,7 @@ public class CityMap {
 		return neighbors.get(city);
 	}
 	
-	public static String getStreet(String start, String end){
+	public String getStreet(String start, String end){
 		
 		return neighbors2.get(start).get(end);
 	}

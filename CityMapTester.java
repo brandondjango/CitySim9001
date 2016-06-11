@@ -29,15 +29,16 @@ public class CityMapTester {
 		Driver brandon = new Driver(1, 9);
     	brandon.setCurr();
     	brandon.setNextLoc();
-    	System.out.print( brandon.curr + " " + brandon.nextLoc);
+    	//System.out.print( brandon.curr + " " + brandon.nextLoc);
     	assertEquals(true, brandon.map.getNeighbors(brandon.curr).contains(brandon.nextLoc));
 		
 	}
 	@Test
 	public void streetTest(){
 		CityMap Pitt = new CityMap();
+		System.out.print(Pitt.getStreet("oc", "College"));
 		assertEquals("Fifth Avenue", Pitt.getStreet("oc", "College"));
 	}
 	}
 
-}
+
