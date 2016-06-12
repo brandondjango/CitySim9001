@@ -8,7 +8,7 @@ public class CityMapTester {
 	public void getNeighborsTest() {
 		CityMap map = new CityMap();
 		
-		assertEquals(true, map.getNeighbors("hotel").contains("library"));
+		assertEquals(true, map.getNeighbors("Hotel").contains("Library"));
 		
 	}
 	
@@ -16,11 +16,11 @@ public class CityMapTester {
 	public void getCitiesTest() {
 		CityMap map = new CityMap();
 		//System.out.print(map.getCities());
-		assertEquals(true, map.getCities().contains("library"));
-		assertEquals(true, map.getCities().contains("hotel"));
-		assertEquals(true, map.getCities().contains("college"));
-		assertEquals(true, map.getCities().contains("diner"));
-		assertEquals(true, map.getCities().contains("oc"));
+		assertEquals(true, map.getCities().contains("Library"));
+		assertEquals(true, map.getCities().contains("Hotel"));
+		assertEquals(true, map.getCities().contains("College"));
+		assertEquals(true, map.getCities().contains("Diner"));
+		assertEquals(true, map.getCities().contains("OC"));
 		
 	}
 	
@@ -36,8 +36,8 @@ public class CityMapTester {
 	@Test
 	public void streetTest(){
 		CityMap Pitt = new CityMap();
-		System.out.print(Pitt.getStreet("oc", "College"));
-		assertEquals("Fifth Avenue", Pitt.getStreet("oc", "College"));
+		System.out.print(Pitt.getStreet("OC", "College"));
+		assertEquals("Fifth Avenue", Pitt.getStreet("OC", "College"));
 	}
 	}
 

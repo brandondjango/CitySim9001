@@ -23,7 +23,7 @@ public class CityMap {
 		 The arraylist is a temporary variable to hold the neighbors of a particular city,
 		 
 		 The hashtable store a cities neighbors in an arraylist, so if for example the 
-		 key is Hotel, the corresponding data is an arraylist of the neighbors ["diner, "library"]
+		 key is Hotel, the corresponding data is an arraylist of the neighbors ["Diner, "Library"]
 		 */
 	
 		Hashtable<String, String> ocstreet = new Hashtable<String, String>();
@@ -39,49 +39,49 @@ public class CityMap {
 		ArrayList<String> dinerlist = new ArrayList<String>();
 				
 		//outside city neighbors
-		oclist.add("college");
-		oclist.add("hotel");
+		oclist.add("College");
+		oclist.add("Hotel");
 		neighbors.put("oc", oclist);	
 		//neighbors and street names
-		ocstreet.put("hotel", "Fourth Avenue");
-		ocstreet.put("college","Fifth Ave");
+		ocstreet.put("Hotel", "Fourth Avenue");
+		ocstreet.put("College","Fifth Ave");
 		neighbors2.put("oc", ocstreet);
 		
-		//hotel neighbors
-		hotellist.add("library");
-		hotellist.add("diner");
-		neighbors.put("hotel", hotellist);
-		//hotel neighbor and streets
-		hotelstreet.put("diner", "Fourth Avenue"); //fix
-		hotelstreet.put("library","Bill Street"); //fix
-		neighbors2.put("hotel", hotelstreet);
+		//Hotel neighbors
+		hotellist.add("Library");
+		hotellist.add("Diner");
+		neighbors.put("Hotel", hotellist);
+		//Hotel neighbor and streets
+		hotelstreet.put("Diner", "Fourth Avenue"); //fix
+		hotelstreet.put("Library","Bill Street"); //fix
+		neighbors2.put("Hotel", hotelstreet);
 		
-		//library neighbors
-		librarylist.add("cleveland");
-		librarylist.add("hotel");
-		neighbors.put("library", librarylist);
-		//hotel neighbor and streets
-		librarystreet.put("cleveland", "Fifth Avenue"); //fix
-		librarystreet.put("hotel","Bill Street"); //fix
-		neighbors2.put("library", librarystreet);
+		//Library neighbors
+		librarylist.add("Cleveland");
+		librarylist.add("Hotel");
+		neighbors.put("Library", librarylist);
+		//Hotel neighbor and streets
+		librarystreet.put("Cleveland", "Fifth Avenue"); //fix
+		librarystreet.put("Hotel","Bill Street"); //fix
+		neighbors2.put("Library", librarystreet);
 		
-		//college neighbors
-		collegelist.add("library");
-		collegelist.add("diner");
-		neighbors.put("college", collegelist);
-		//hotel neighbor and streets
-		collegestreet.put("library", "Fifth Avenue"); //fix
-		collegestreet.put("diner","Phil Street"); //fix
-		neighbors2.put("college", collegestreet);
+		//College neighbors
+		collegelist.add("Library");
+		collegelist.add("Diner");
+		neighbors.put("College", collegelist);
+		//Hotel neighbor and streets
+		collegestreet.put("Library", "Fifth Avenue"); //fix
+		collegestreet.put("Diner","Phil Street"); //fix
+		neighbors2.put("College", collegestreet);
 		
-		//diner neighbors
-		dinerlist.add("college");
-		dinerlist.add("philidelphia");
-		neighbors.put("diner", dinerlist);
-		//hotel neighbor and streets
-		dinerstreet.put("philidelphia", "Fourth Avenue"); //fix
-		dinerstreet.put("college","Phil Street"); //fix
-		neighbors2.put("diner", dinerstreet);
+		//Diner neighbors
+		dinerlist.add("College");
+		dinerlist.add("Philidelphia");
+		neighbors.put("Diner", dinerlist);
+		//Hotel neighbor and streets
+		dinerstreet.put("Philidelphia", "Fourth Avenue"); //fix
+		dinerstreet.put("College","Phil Street"); //fix
+		neighbors2.put("Diner", dinerstreet);
 			
 	}
 	
@@ -100,7 +100,13 @@ public class CityMap {
 	
 	public String getStreet(String start, String end){
 		
-		return neighbors2.get(start).get(end);
+		if (neighbors.get(start).contains(end))
+		{
+			return neighbors2.get(start).get(end);
+		}
+		else{
+			return null;
+		}
 	}
 
 
