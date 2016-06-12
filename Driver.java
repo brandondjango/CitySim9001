@@ -61,7 +61,7 @@ public void drive(){
     }
     
     public void setCurrStreet(){
-    	
+    	//System.out.println(map.getStreet(curr, nextLoc));
     	street = map.getStreet(curr, nextLoc);
     	    
     }

@@ -7,7 +7,7 @@ public class CitySim9001 {
 
 	public static void main(String [] args){
 		CitySim9001 sim = new CitySim9001();
-		Integer integer = Integer.parseInt(args[0]);
+		
 		
 		//arg error check
 		String error = sim.errorArgsCheck(args);
@@ -16,17 +16,22 @@ public class CitySim9001 {
 			System.exit(0);
 		}
 		
+		Integer integer = Integer.parseInt(args[0]);
+		
 		//driver loop
 		for(int i = 0; i < 5; i++){
 			Driver driver = new Driver(i, integer);
 			driver.start();
 			driver.print();
+			System.out.println("nextLoc: " + driver.nextLoc);
 			//while driver is not in philidelphia or cleveland, drive
-			while(!driver.curr.equals("philidelphia") || !driver.curr.equals("cleveland")){
+			while(!driver.nextLoc.equals("philidelphia") && !driver.nextLoc.equals("cleveland")){
 				driver.drive();
 				driver.print();
+				if(driver.nextLoc.equals("philidelphia") || driver.nextLoc.equals("cleveland"))
+					break;
 			}
-			driver.print();
+			
 		}
 		
 		

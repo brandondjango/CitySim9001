@@ -34,8 +34,8 @@ public class CityMap {
 		oclist.add("hotel");
 		neighbors.put("oc", oclist);	
 		//neighbors and street names
-		ocstreet.put("Hotel", "Fourth Avenue");
-		ocstreet.put("College","Fifth Ave");
+		ocstreet.put("hotel", "Fourth Avenue");
+		ocstreet.put("college","Fifth Ave");
 		neighbors2.put("oc", ocstreet);
 		
 		//hotel neighbors
@@ -43,8 +43,8 @@ public class CityMap {
 		hotellist.add("diner");
 		neighbors.put("hotel", hotellist);
 		//hotel neighbor and streets
-		hotelstreet.put("Diner", "Fourth Avenue"); //fix
-		hotelstreet.put("Library","Bill Street"); //fix
+		hotelstreet.put("diner", "Fourth Avenue"); //fix
+		hotelstreet.put("library","Bill Street"); //fix
 		neighbors2.put("hotel", hotelstreet);
 		
 		//library neighbors
@@ -52,8 +52,8 @@ public class CityMap {
 		librarylist.add("hotel");
 		neighbors.put("library", librarylist);
 		//hotel neighbor and streets
-		librarystreet.put("Cleveland", "Fifth Avenue"); //fix
-		librarystreet.put("Hotel","Bill Street"); //fix
+		librarystreet.put("cleveland", "Fifth Avenue"); //fix
+		librarystreet.put("hotel","Bill Street"); //fix
 		neighbors2.put("library", librarystreet);
 		
 		//college neighbors
@@ -61,8 +61,8 @@ public class CityMap {
 		collegelist.add("diner");
 		neighbors.put("college", collegelist);
 		//hotel neighbor and streets
-		collegestreet.put("Library", "Fifth Avenue"); //fix
-		collegestreet.put("Diner","Phil Street"); //fix
+		collegestreet.put("library", "Fifth Avenue"); //fix
+		collegestreet.put("diner","Phil Street"); //fix
 		neighbors2.put("college", collegestreet);
 		
 		//diner neighbors
@@ -70,8 +70,8 @@ public class CityMap {
 		dinerlist.add("philidelphia");
 		neighbors.put("diner", dinerlist);
 		//hotel neighbor and streets
-		dinerstreet.put("Philidelphia", "Fourth Avenue"); //fix
-		dinerstreet.put("College","Phil Street"); //fix
+		dinerstreet.put("philidelphia", "Fourth Avenue"); //fix
+		dinerstreet.put("college","Phil Street"); //fix
 		neighbors2.put("diner", dinerstreet);
 			
 	}
