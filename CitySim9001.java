@@ -23,13 +23,16 @@ public class CitySim9001 {
 			Driver driver = new Driver(i, integer);
 			driver.start();
 			driver.print();
-			System.out.println("nextLoc: " + driver.nextLoc);
+			
 			//while driver is not in philidelphia or cleveland, drive
 			while(!driver.nextLoc.equals("philidelphia") && !driver.nextLoc.equals("cleveland")){
 				driver.drive();
 				driver.print();
-				if(driver.nextLoc.equals("philidelphia") || driver.nextLoc.equals("cleveland"))
+				if(driver.nextLoc.equals("philidelphia") || driver.nextLoc.equals("cleveland")){
+					System.out.println("Driver " + i + " has gone to " + driver.nextLoc + "!");
+					System.out.println("--------------------------------------");
 					break;
+				}
 			}
 			
 		}

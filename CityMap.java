@@ -1,3 +1,12 @@
+/*
+ Hard coded city map. This map determines where our drivers can travel.
+ 
+ CityMap can show a list of all the cities, the neighbors of a particular city, and 
+ can tell which street is between two cities.
+ 
+ 
+ */
+
 import java.util.*;
 
 public class CityMap {
