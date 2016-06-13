@@ -9,6 +9,7 @@ public class CityMapTester {
 	/////////////////////////////////////
 
 	//Test checks for location library in the CityMap 
+	//It should be there(test should pass)
 	@Test
 	public void libraryTest() {
 		CityMap map = new CityMap();
@@ -16,13 +17,15 @@ public class CityMapTester {
 	}
 	
 	//Test checks for location library in the CityMap 
+	//It should be there(test should pass)
 	@Test
 	public void hotelTest() {
 		CityMap map = new CityMap();
 		assertEquals(true, map.getCities().contains("hotel"));		
 	}
 	
-		//Test checks for location library in the CityMap 
+	//Test checks for location library in the CityMap 
+	//It should be there(test should pass)
 	@Test
 	public void dinerTest() {
 		CityMap map = new CityMap();
@@ -30,6 +33,7 @@ public class CityMapTester {
 	}
 		
 	//Test checks for location library in the CityMap 
+	//It should be there(test should pass)
 	@Test
 	public void collegeTest() {
 		CityMap map = new CityMap();
@@ -37,6 +41,7 @@ public class CityMapTester {
 	}
 	
 	//Test checks for location outside city(oc) in the CityMap 
+	//It should be there(test should pass)
 	@Test
 	public void ocTest() {
 		CityMap map = new CityMap();
@@ -44,6 +49,7 @@ public class CityMapTester {
 	}
 	
 	//Test checks for all locations within same instance of object, getCities test
+	//It should be there(test should pass)
 	@Test
 	public void getCitiesTest() {
 		CityMap map = new CityMap();
@@ -56,18 +62,33 @@ public class CityMapTester {
 		
 	}
 	
-	//checks that hotel has neighbors library and 
+	//checks that hotel has neighbors library and diner
 	@Test
 	public void getNeighborsHotelTest() {
 		CityMap map = new CityMap();
 		assertEquals(true, map.getNeighbors("hotel").contains("library"));
 		assertEquals(true, map.getNeighbors("hotel").contains("diner"));
 	}
+	
+	//checks that library has neighbors hotel and Cleveland
+	@Test
+	public void getNeighborsLibraryTest() {
+		CityMap map = new CityMap();
+		assertEquals(true, map.getNeighbors("library").contains("hotel"));
+		assertEquals(true, map.getNeighbors("library").contains("cleveland"));
+	}
+	
+	//checks OC has neighbor hotel and college
+	@Test
+	public void getNeighborsOCTest() {
+		CityMap map = new CityMap();
+		assertEquals(true, map.getNeighbors("oc").contains("college"));
+		assertEquals(true, map.getNeighbors("oc").contains("hotel"));
+	}
 	//Checks Fifth Avenue connects outside city(oc) and college
 	@Test
 	public void streetTest(){
 		CityMap Pitt = new CityMap();
-		
 		assertEquals("Fifth Avenue", Pitt.getStreet("oc", "college"));
 	}
 	
