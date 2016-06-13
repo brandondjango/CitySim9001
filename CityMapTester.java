@@ -53,7 +53,6 @@ public class CityMapTester {
 	@Test
 	public void getCitiesTest() {
 		CityMap map = new CityMap();
-		//System.out.print(map.getCities());
 		assertEquals(true, map.getCities().contains("library"));
 		assertEquals(true, map.getCities().contains("hotel"));
 		assertEquals(true, map.getCities().contains("college"));
@@ -248,11 +247,60 @@ public class CityMapTester {
 			
 		assertEquals(5, citysim.counter);
 		String[] args = {"1"};
-		citysim.main(args);
+		//citysim.main(args);
 		
 		assertEquals(5, citysim.counter);
 				
 						
+		}
+	
+	//isDriverGone tests whether or not the drivers nextLoc is cleveland or pittsburgh
+	//in this test the driver is going to Zainesville, so the function should return false
+	@Test
+	public void isDriverGoneTest() {
+		CitySim9001 citysim = new CitySim9001();
+		Driver d = new Driver(4, 4);
+		d.nextLoc = "Zainesville";
+		assertEquals(false, citysim.isDriverGone(d));
+				
+						
+		}
+	
+	//isDriverGone tests whether or not the drivers nextLoc is cleveland or pittsburgh
+	//in this test the driver is going to philidelphia, so the function should return true
+	@Test
+	public void isDriverGoneTest2() {
+		CitySim9001 citysim = new CitySim9001();
+		Driver d = new Driver(4, 4);
+		d.nextLoc = "philidelphia";
+		assertEquals(true, citysim.isDriverGone(d));
+					
+							
+	}
+	
+	//isDriverGone tests whether or not the drivers nextLoc is cleveland or pittsburgh
+	//in this test the driver is going to philidelphia, so the function should return true
+	@Test
+	public void isDriverGoneTest3() {
+		CitySim9001 citysim = new CitySim9001();
+		Driver d = new Driver(4, 4);
+		d.nextLoc = "cleveland";
+		assertEquals(true, citysim.isDriverGone(d));
+					
+		}
+	
+	//printdriverisgone is a method that prints a message when the driver is leaving for cleveland/philly
+	//it must contain the correct driver id and correct destination
+	//this test will ensure it does both(it should pass
+	@Test
+	public void printDriverisGoneTest() {
+		CitySim9001 citysim = new CitySim9001();
+		Driver d = new Driver(4, 4);
+		d.nextLoc = "Pittsburgh";
+		String message = citysim.printDriverGone(d);
+		boolean t = (message.contains("4") && message.contains("Pittsburgh") );
+		assertEquals(true, t);
+					
 		}
 	
 	

@@ -45,15 +45,13 @@ public class CitySim9001 {
 				if(sim.isDriverGone(driver)){
 					System.out.print(sim.printDriverGone(driver));
 					break;
-				}
-			}
+				}//end if
+			}//end while
 			
-		}
+		}//end for
+				
 		
-		
-		
-		
-	}
+	}//end main
 	
 	public boolean isDriverGone(Driver d){
 		if(d.nextLoc.equals("philidelphia") || d.nextLoc.equals("cleveland"))
