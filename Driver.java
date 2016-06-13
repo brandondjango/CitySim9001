@@ -79,14 +79,16 @@ public class Driver {
     
     //set current street to the one connecting curr to nextLoc
     public void setCurrStreet(){
-    	//System.out.println(map.getStreet(curr, nextLoc));
-    	street = map.getStreet(curr, nextLoc);
-    	    
+    	street = map.getStreet(curr, nextLoc);    	    
     }
     
     //print pertinent Driver information including id, curr, nextLoc, and street
     public void print(){
     	System.out.println("Driver " + id + " is driving from " + curr + " to " + nextLoc + " via " + street);
+    }
+    
+    public String toString(){
+    	return ("Driver " + id + " is driving from " + curr + " to " + nextLoc + " via " + street);
     }
     
 

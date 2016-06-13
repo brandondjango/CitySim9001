@@ -44,7 +44,7 @@ public class CityMap {
 		neighbors.put("oc", oclist);	
 		//neighbors and street names
 		ocstreet.put("hotel", "Fourth Avenue");
-		ocstreet.put("college","Fifth Ave");
+		ocstreet.put("college","Fifth Avenue");
 		neighbors2.put("oc", ocstreet);
 		
 		//hotel neighbors
@@ -94,7 +94,6 @@ public class CityMap {
 	}
 	
 	public ArrayList<String> getNeighbors(String city) {
-		//System.out.print(neighbors);
 		return neighbors.get(city);
 	}
 	
@@ -102,6 +101,6 @@ public class CityMap {
 		
 		return neighbors2.get(start).get(end);
 	}
-
-
+	
+	
 }
