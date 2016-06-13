@@ -1,0 +1,33 @@
+output seed: 5
+
+Driver 0 is driving from OC to Hotel via Fourth Avenue
+Driver 0 is driving from Hotel to Library via Bill Street
+Driver 0 is driving from Library to Hotel via Bill Street
+Driver 0 is driving from Hotel to Library via Bill Street
+Driver 0 is driving from Library to Cleveland via Fifth Avenue
+Driver 0 has gone to Cleveland!
+--------------------------------------
+Driver 1 is driving from OC to Hotel via Fourth Avenue
+Driver 1 is driving from Hotel to Library via Bill Street
+Driver 1 is driving from Library to Cleveland via Fifth Avenue
+Driver 1 has gone to Cleveland!
+--------------------------------------
+Driver 2 is driving from OC to Hotel via Fourth Avenue
+Driver 2 is driving from Hotel to Diner via Fourth Avenue
+Driver 2 is driving from Diner to Philidelphia via Fourth Avenue
+Driver 2 has gone to Philidelphia!
+--------------------------------------
+Driver 3 is driving from OC to Hotel via Fourth Avenue
+Driver 3 is driving from Hotel to Library via Bill Street
+Driver 3 is driving from Library to Hotel via Bill Street
+Driver 3 is driving from Hotel to Diner via Fourth Avenue
+Driver 3 is driving from Diner to College via Phil Street
+Driver 3 is driving from College to Library via Fifth Avenue
+Driver 3 is driving from Library to Cleveland via Fifth Avenue
+Driver 3 has gone to Cleveland!
+--------------------------------------
+Driver 4 is driving from OC to College via Fifth Ave
+Driver 4 is driving from College to Diner via Phil Street
+Driver 4 is driving from Diner to Philidelphia via Fourth Avenue
+Driver 4 has gone to Philidelphia!
+--------------------------------------

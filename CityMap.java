@@ -41,11 +41,11 @@ public class CityMap {
 		//outside city neighbors
 		oclist.add("College");
 		oclist.add("Hotel");
-		neighbors.put("oc", oclist);	
+		neighbors.put("OC", oclist);	
 		//neighbors and street names
 		ocstreet.put("Hotel", "Fourth Avenue");
 		ocstreet.put("College","Fifth Ave");
-		neighbors2.put("oc", ocstreet);
+		neighbors2.put("OC", ocstreet);
 		
 		//Hotel neighbors
 		hotellist.add("Library");
