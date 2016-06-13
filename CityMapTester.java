@@ -3,7 +3,8 @@ import static org.junit.Assert.*;
 import org.junit.Test;
 
 public class CityMapTester {
-
+	
+	
 	@Test
 	public void getNeighborsTest() {
 		CityMap map = new CityMap();
